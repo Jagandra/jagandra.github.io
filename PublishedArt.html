@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Published Artwork – Detailed View</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Merienda:wght@400;700&family=Playpen+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #005F73;
+      --green: #0A9396;
+      --soft-pink: #fff1f9;
+      --text: #1A1A1A;
+    }
+
+    body {
+      background-color: var(--soft-pink);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      font-family: "Playpen Sans Arabic", sans-serif;
+    }
+
+    /* 1. BACK TO HOME: Pinned to top-left corner */
+    .back-home {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      z-index: 10;
+    }
+
+    .back-home:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+
+    .page-container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 80px 20px 40px 20px;
+    }
+
+    /* 2. HEADER: Title and Large Palette Icon */
+    .header-section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .title-wrapper {
+      display: inline-flex;
+      align-items: center; 
+      justify-content: center;
+      gap: 20px;
+      border-bottom: 3px solid var(--dark);
+      padding-bottom: 8px;
+    }
+
+    .main-topic {
+      font-family: "Merriweather", serif;
+      color: var(--dark);
+      font-size: clamp(24px, 5vw, 36px);
+      margin: 0;
+    }
+
+    .title-icon {
+      width: 70px; /* "Little big" as requested */
+      height: 70px;
+      object-fit: contain;
+      transform: translateY(5px); /* Keeps it level with text baseline */
+    }
+
+    /* 3. SIDE-BY-SIDE CONTENT LAYOUT */
+    .content-flex {
+      display: flex;
+      align-items: flex-start;
+      gap: 50px;
+      margin-top: 20px;
+    }
+
+    /* Left Side: The Image */
+    .image-container {
+      flex: 1.2; /* Makes image side slightly wider */
+      text-align: center;
+    }
+
+    .featured-artwork {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+      border-radius: 15px;
+      border: 6px solid white;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    /* Right Side: The Description Box */
+    .description-container {
+      flex: 1;
+    }
+
+    .artwork-description-box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      font-size: 1.1rem;
+      color: #333;
+      text-align: left;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .artwork-description-box p:first-child {
+      margin-top: 0;
+    }
+
+    /* 4. RESPONSIVE: Stack vertically on mobile */
+    @media (max-width: 900px) {
+      .content-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+      .back-home {
+        position: static;
+        display: inline-block;
+        margin: 20px 0 0 25px;
+      }
+      .page-container {
+        padding-top: 20px;
+      }
+      .title-icon {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html#project3" class="back-home">← Back to Home</a>
+
+  <div class="page-container">
+    
+    <header class="header-section">
+      <div class="title-wrapper">
+        <h1 class="main-topic">Published Black-and-White Artwork</h1>
+        <img src="icons/Palette.png" alt="Art Palette" class="title-icon">
+      </div>
+    </header>
+
+    <main class="content-flex">
+      
+      <div class="image-container">
+        <img src="icons/Magazine.jpg" alt="Featured Portrait Art" class="featured-artwork">
+      </div>
+
+      <div class="description-container">
+        <article class="artwork-description-box">
+          <p>
+            This black-and-white portrait painting was created during the 2024–2025 academic year. 
+            Its high contrast and detailed shading led to its selection for publication in the 
+            <strong>Thistletown Collegiate Institute</strong> school magazine. 
+          </p>
+          <p>
+            The piece explores the depth of human emotion through monochrome tones, focusing on 
+            the play between light and shadow. Being featured in the school magazine was a 
+            significant milestone in my artistic journey.
+          </p>
+        </article>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

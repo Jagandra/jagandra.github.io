@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pencil Sketching Artwork Collection</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Merienda:wght@400;700&family=Playpen+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Merienda", sans-serif;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: #BFD6E7; /* NEW BACKGROUND */
+      color: #000000; /* ALL TEXT BLACK */
+      position: relative;
+    }
+
+    /* BACK TO HOME BUTTON */
+    .back-box {
+      display: inline-block;
+      padding: 8px 14px;
+      background: white;
+      border: 2px solid #2C77B2;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .back-box a {
+      text-decoration: none;
+      color: #2C77B2;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-family: "Merriweather";
+      color: #2C77B2; /* HEADLINE ONLY */
+    }
+
+    p {
+      font-size: 20px;
+      font-family: "Playpen Sans Arabic";
+      color: #000000;
+    }
+
+    /* ROW: contains 2 image+description pairs */
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    /* Each pair: image left + description right */
+    .pair {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(255,255,255,0.7);
+      padding: 15px;
+      border-radius: 12px;
+      border: 2px solid #2C77B2;
+    }
+
+    .pair img {
+      width: 260px;
+      border-radius: 12px;
+      border: 4px solid #2C77B2;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .desc {
+      font-family: "Playpen Sans Arabic";
+      font-size: 18px;
+      color: #000000;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    /* Popup viewer */
+    .image-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+    }
+
+    .image-popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      border: 4px solid #2C77B2;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* CONTACT INFO (BOTTOM RIGHT) */
+    .contact-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffffffcc;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-family: "Playpen Sans Arabic";
+      font-size: 16px;
+      color: #000000;
+      border: 2px solid #2C77B2;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 0px; /* SMALL GAP ONLY */
+    }
+
+    /* NO EXTRA SPACE BETWEEN ROWS */
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: -3px; /* ← NO SPACE */
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BACK TO HOME BUTTON -->
+  <div class="back-box">
+    <a href="index.html#project6">← Back to Home</a>
+  </div>
+
+  <h1>Pencil Sketching Artwork Collection</h1>
+
+  <p>
+    A collection of expressive pencil sketches featuring cultural themes,
+    fine‑line shading, and detailed character work.
+    Click any artwork to view it in full size.
+  </p>
+
+  <!--  ROW 1 -->
+  <div class="row">
+
+    <div class="pair">
+      <img src="images/brain.jpg" onclick="openPopup(this.src)">
+      <div class="desc">A detailed anatomical brain sketch showing shading and structure.</div>
+    </div>
+
+    <div class="pair">
+      <img src="images/paperbag.jpg" onclick="openPopup(this.src)">
+      <div class="desc">A realistic paper bag drawing with soft folds and shadow depth.</div>
+    </div>
+
+  </div>
+
+  <!--  ROW 2 -->
+  <div class="row">
+
+    <div class="pair">
+      <img src="images/snake.jpg" onclick="openPopup(this.src)">
+      <div class="desc">A coiled snake sketch with textured scales and smooth shading.</div>
+    </div>
+
+    <div class="pair">
+      <img src="images/adidas.jpg" onclick="openPopup(this.src)">
+      <div class="desc">A clean pencil rendering of an Adidas sneaker with fine details.</div>
+    </div>
+
+  </div>
+
+  <!--  ROW 3 -->
+  <div class="row">
+
+    <div class="pair">
+      <img src="images/eye.jpg" onclick="openPopup(this.src)">
+      <div class="desc">A realistic human eye sketch with detailed iris and eyelashes.</div>
+    </div>
+
+    <div class="pair">
+      <img src="images/nike.jpg" onclick="openPopup(this.src)">
+      <div class="desc">A Nike Air Force 1 sketch showing structure and line precision.</div>
+    </div>
+
+  </div>
+
+  <!--  ROW 4 -->
+  <div class="row">
+
+    <div class="pair">
+      <img src="images/shiva.jpg" onclick="openPopup(this.src)">
+      <div class="desc">A spiritual portrait sketch inspired by Lord Shiva.</div>
+    </div>
+
+    <div class="pair">
+      <img src="images/culturalface.jpg" onclick="openPopup(this.src)">
+      <div class="desc">A cultural face sketch with decorative patterns and expressive features.</div>
+    </div>
+
+  </div>
+
+  <!-- Popup viewer -->
+  <div class="image-popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <img id="popup-img">
+  </div>
+
+  <!-- Contact info (ONLY bottom-right icons) -->
+  <div class="contact-box">
+    <strong>Contact for Portrait Commissions:</strong>
+
+    <a href="mailto:jagandradesign@gmail.com" class="contact-row">
+      <img src="icons/email.jpg" class="contact-icon">
+      <span>Email: jagandradesign@gmail.com</span>
+    </a>
+
+    <a href="https://www.instagram.com/jagandra_design" target="_blank" class="contact-row">
+      <img src="icons/instagram.jpg" class="contact-icon">
+      <span>Instagram: @jagandra_design</span>
+    </a>
+
+  </div>
+
+  <script>
+    function openPopup(src) {
+      document.getElementById("popup-img").src = src;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

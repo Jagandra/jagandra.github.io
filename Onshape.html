@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Onshape 3D Modeling Portfolio</title>
+  <style>
+    body { 
+      font-family: "Merienda";
+      padding: 20px; 
+      max-width: 1200px;
+      margin: auto;
+      background-color: #264653; /* peacock feather blue */
+      color: white;
+      position: relative;
+    }
+
+    a.back {
+      font-size: 20px;
+      text-decoration: none;
+      color: #e9c46a;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-family: "Merienda";
+    }
+
+    /* Corner decorative image */
+    .corner-image {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 90px;
+      opacity: 0.95;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      letter-spacing: 1.5px;
+      font-family: "Merienda";
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      font-family: "Merienda";
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      border: 4px solid #e9c46a;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    /* Popup background */
+    .image-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    /* Big image */
+    .image-popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      border: 4px solid #e9c46a;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      font-family: Merienda;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Back to Home -->
+  <a href="index.html#project2" class="back">← Back to Home</a>
+
+
+  <!-- Decorative image in top-right corner -->
+  <img src="images/onshape_logo.png" class="corner-image">
+
+  <h1>Onshape 3D Modeling Portfolio</h1>
+  <p>Here are all my 3D designs created in Onshape.</p>
+
+  <div class="gallery">
+
+    <!-- All images clickable with popup -->
+    <img src="images/onshape1.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape2.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape3.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape4.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape5.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape6.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape7.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape8.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape9.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape10.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape11.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape12.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape13.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape14.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape15.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape16.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape17.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape18.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape19.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape20.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape21.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape22.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape23.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape24.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape25.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape26.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape27.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape28.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape29.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape30.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape31.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape32.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape33.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape34.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape35.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape36.jpg" onclick="openPopup(this.src)">
+    <img src="images/onshape37.jpg" onclick="openPopup(this.src)">
+
+  </div>
+
+  <!-- Popup viewer -->
+  <div class="image-popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <img id="popup-img">
+  </div>
+
+  <script>
+    function openPopup(src) {
+      document.getElementById("popup-img").src = src;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

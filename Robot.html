@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Miniature Robot Car – Step‑by‑Step Build</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Merienda:wght@400;700&family=Playpen+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #005F73;
+      --green: #0A9396;
+      --teal: #94D2BD;
+      --gold: #E9C46A;
+      --cream: #FAF3E0;
+      --text: #1A1A1A;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .content-page {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    /* FONTS */
+    .font-title {
+      font-family: "Merriweather", serif;
+    }
+
+    .font-step {
+      font-family: "Merienda", cursive;
+    }
+
+    .font-text {
+      font-family: "Playpen Sans Arabic", sans-serif;
+    }
+
+    .font-link {
+      font-family: "Playpen Sans Arabic", sans-serif;
+    }
+
+    h1 {
+      color: var(--dark);
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--green);
+      font-size: 28px;
+      font-weight: 600;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: var(--teal);
+    }
+
+    .back-link {
+      color: var(--dark);
+    }
+
+    .back-link:hover {
+      color: var(--green);
+    }
+
+    /* ONLY ONE IMAGE — SMALL TOP RIGHT  */
+    .top-right-image {
+      width: 120px;
+      border-radius: 10px;
+      position: absolute;
+      top: 40px;
+      right: -75px;
+    }
+
+    .step-block {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* STEP IMAGES */
+    .step-image {
+      width: 450px;
+      height: auto;
+      display: block;
+      margin: 15px auto;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px solid var(--green);
+    }
+
+.title-border {
+  border: 2px solid #005F73;   /* your theme color */
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+
+
+    /* Popup background */
+    .image-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    /* Big image */
+    .image-popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      border: 4px solid var(--gold);
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      font-family: Arial;
+    }
+  </style>
+</head>
+
+<body class="content-page">
+
+  <!--  ONLY ONE IMAGE — SMALL TOP RIGHT  -->
+  <img src="images/Robotcar2.png" class="top-right-image">
+
+<!--  FIXED BACK TO HOME LINK -->
+  <p><a href="index.html#project1" class="back-link font-link">← Back to Home</a></p>
+
+
+  <div style="text-align:center;">
+
+  <h1 class="font-title title-border">Miniature Robot Car – Step‑by‑Step Build</h1>
+</div>
+
+  <p class="font-text" style="text-align:center;">
+    This page shows the full process of building my robot car, from motors to wiring to final assembly.
+  </p>
+
+  <!-- STEP 1 -->
+  <div class="step-block">
+    <h2 class="font-step">Step 1 — Motors and Base Assembly</h2>
+    <img src="images/robot_step1.jpg" class="step-image" onclick="openPopup(this.src)">
+    <p class="font-text">I began by mounting the motors onto the chassis and securing them with brackets and screws.</p>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step-block">
+    <h2 class="font-step">Step 2 — Wiring the Motor Driver</h2>
+    <img src="images/robot_step2.jpg" class="step-image" onclick="openPopup(this.src)">
+    <p class="font-text">I connected the motor wires to the control board and organized the wiring for clean routing.</p>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step-block">
+    <h2 class="font-step">Step 3 — Adding the Battery Pack</h2>
+    <img src="images/robot_step3.jpg" class="step-image" onclick="openPopup(this.src)">
+    <p class="font-text">The battery pack was mounted and connected to power the motors and electronics.</p>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step-block">
+    <h2 class="font-step">Step 4 — Installing the Servo and Front Mount</h2>
+    <img src="images/robot_step4.jpg" class="step-image" onclick="openPopup(this.src)">
+    <p class="font-text">I attached the servo and front bracket, preparing the robot for sensors or attachments.</p>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step-block">
+    <h2 class="font-step">Step 5 — Final Wiring and Testing</h2>
+    <img src="images/robot_step5.jpg" class="step-image" onclick="openPopup(this.src)">
+    <p class="font-text">After completing the wiring, I tested movement, turning, and stability.</p>
+  </div>
+
+  <!-- Popup viewer -->
+  <div class="image-popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <img id="popup-img">
+  </div>
+
+  <script>
+    function openPopup(src) {
+      document.getElementById("popup-img").src = src;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

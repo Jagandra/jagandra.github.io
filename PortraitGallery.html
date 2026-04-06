@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Black‑and‑White Portrait Collection</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background: #f0f4f8;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+  }
+
+  /* Back to Home button */
+  .back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #0A9396;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    z-index: 9999;
+  }
+
+  .back-home:hover {
+    background: #0f7f82;
+  }
+
+  /* Page Title */
+  .gallery-title {
+    text-align: center;
+    font-size: 38px;
+    color: #005F73;
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
+
+  .gallery-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  /* Gallery grid */
+  .painting-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
+  }
+
+  .painting {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .painting:hover {
+    transform: scale(1.05);
+  }
+
+  /* Fullscreen viewer */
+  #viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+  }
+
+  #viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+  }
+
+  #closeBtn {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  /* Contact info bottom-right */
+  .contact-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 14px;
+    z-index: 9999;
+    line-height: 1.8;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .contact-row:hover {
+    opacity: 0.7;
+  }
+
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Back to Home -->
+<a href="index.html#project4" class="back-home">← Back to Home</a>
+
+<!-- Title -->
+<h1 class="gallery-title">Black‑and‑White Portrait Collection</h1>
+<p class="gallery-subtitle">A series of hand‑painted portraits focused on realism and expressive detail.</p>
+
+<!-- Gallery -->
+<div class="painting-gallery">
+  <img src="images/portrait1.jpg" class="painting">
+  <img src="images/portrait2.jpg" class="painting">
+  <img src="images/portrait3.jpg" class="painting">
+  <img src="images/portrait4.jpg" class="painting">
+  <img src="images/portrait5.jpg" class="painting">
+  <img src="images/portrait6.jpg" class="painting">
+</div>
+
+<!-- Fullscreen viewer -->
+<div id="viewer">
+  <span id="closeBtn">×</span>
+  <img id="viewerImg">
+</div>
+
+<!-- Contact info (ONLY bottom-right icons) -->
+<div class="contact-box">
+  <strong>Contact for Portrait Commissions:</strong><br>
+
+  <a href="mailto:jagandradesign@gmail.com" class="contact-row">
+    <img src="icons/email.jpg" class="contact-icon">
+    <span>Email: jagandradesign@gmail.com</span>
+  </a>
+
+  <a href="https://www.instagram.com/jagandra_design" target="_blank" class="contact-row">
+    <img src="icons/instagram.jpg" class="contact-icon">
+    <span>Instagram: @jagandra_design</span>
+  </a>
+</div>
+
+<script>
+  const paintings = document.querySelectorAll('.painting');
+  const viewer = document.getElementById('viewer');
+  const viewerImg = document.getElementById('viewerImg');
+  const closeBtn = document.getElementById('closeBtn');
+
+  paintings.forEach(img => {
+    img.addEventListener('click', () => {
+      viewer.style.display = 'flex';
+      viewerImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    viewer.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

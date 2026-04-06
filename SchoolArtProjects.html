@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>School Art Projects Collection</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Merienda", sans-serif;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+      background-color: #f3e8ff; /* soft pastel purple */
+      color: #1a1a1a;
+    }
+
+    a.back {
+      font-size: 20px;
+      text-decoration: none;
+      color: #7b2cbf;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: "Merriweather";
+      font-size: 36px;
+      color: #5a189a;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* ITEM LAYOUT: LEFT IMAGE + RIGHT TEXT */
+    .item {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .item img {
+      width: 280px;
+      border-radius: 12px;
+      border: 4px solid #7b2cbf;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .text-box {
+      flex: 1;
+    }
+
+    .text-box h2 {
+      font-family: "Merriweather";
+      font-size: 26px;
+      color: #5a189a;
+      margin-bottom: 10px;
+    }
+
+    .text-box p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    /* Popup viewer */
+    .image-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .image-popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      border: 4px solid #c77dff;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--  Back to Home (goes to Project 7 area) -->
+  <a href="index.html#project7" class="back">← Back to Home</a>
+
+  <h1>School Art Projects Collection</h1>
+  <p class="subtitle">A showcase of my school art projects: ceramics, nail design, and a hairstyling poster.</p>
+
+  <!-- ITEM 1 — Ceramic Frog Tile -->
+  <div class="item">
+    <img src="images/school_ceramic.jpg" onclick="openPopup(this.src)">
+    <div class="text-box">
+      <h2>Ceramic Lotus‑Pad Tile — Art Class</h2>
+      <p>
+        I created this ceramic lotus‑pad tile in my art class.  
+        It includes hand‑sculpted frogs and lotus arranged in a grid pattern.  
+        I painted and glazed each piece to give it a shiny, realistic finish.
+      </p>
+    </div>
+  </div>
+
+  <!--  ITEM 2 — Nail Art Project -->
+  <div class="item">
+    <img src="images/school_nailart.jpg" onclick="openPopup(this.src)">
+    <div class="text-box">
+      <h2>Nail Art Designs — Hairstyling Class</h2>
+      <p>
+        These nail designs were created in my hairstyling class.  
+        I practiced applying gems, patterns, and color combinations  
+        to create clean, professional‑looking nail art samples.
+      </p>
+    </div>
+  </div>
+
+  <!--  ITEM 3 — Hairstyling Culminating Poster -->
+  <div class="item">
+    <img src="images/school_poster.jpg" onclick="openPopup(this.src)">
+    <div class="text-box">
+      <h2>Hairstyling Poster — Culminating Project</h2>
+      <p>
+        This poster was my culminating project in hairstyling class.  
+        I designed it to show creativity, color coordination,  
+        and different nail polish styles in a classroom display.
+      </p>
+    </div>
+  </div>
+
+  <!-- Popup viewer -->
+  <div class="image-popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <img id="popup-img">
+  </div>
+
+  <script>
+    function openPopup(src) {
+      document.getElementById("popup-img").src = src;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
