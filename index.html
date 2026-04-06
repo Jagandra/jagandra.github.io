@@ -1,0 +1,470 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jagandra Selvamoorthi</title>
+
+  <meta name="author" content="Jagandra Selvamoorthi">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #FAF3E0;
+      color: #1A1A1A;
+      font-family: 'Merriweather', serif;
+    }
+
+    /* HEADER GRID */
+    .top-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      padding: 5px 40px 0px 40px;
+      background: white;
+      border-bottom: 3px solid #0A9396;
+    }
+
+    .jd-logo {
+      width: 160px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .header-center {
+      text-align: center;
+    }
+
+    .site-name {
+      font-family: 'Merriweather', serif;
+      font-size: 50px;
+      margin: 0;
+      color: #005F73;
+      margin-left: -70px;
+      margin-top: -10px;
+    }
+
+    /* RIGHT SIDE OF HEADER */
+    .header-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    /* SEARCH BAR BACKGROUND + ICONS */
+    .searchbar-wrapper {
+      background-image: url("images/searchbar.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      width: 390px;
+      height: 90px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      padding: 0 10px;
+      padding-left: 30px;
+      border-radius: 8px;
+
+      margin-top: 5px;
+    }
+
+    .searchbar-wrapper a {
+      color: #0A9396;
+      text-decoration: none;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .searchbar-wrapper a:hover {
+      color: #94D2BD;
+    }
+
+    .icon {
+      width: 16px;
+      height: 14px;
+      object-fit: contain;
+      opacity: 0.9;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .info-text {
+      font-family: 'Merienda', cursive;
+      font-size: 22px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #0A9396;
+      font-weight: bold;
+      font-family: 'Merriweather', serif;
+    }
+
+    /* PHOTO — TOUCH RIGHT SIDE, NO BORDER, ROUNDED CORNERS */
+    .profile-photo {
+      width: 610px;
+      border-radius: 25px; /* smooth corners */
+      border: none;
+      margin-left: auto;   /*  pushes photo to right edge */
+      margin-right: -178px;>
+      top: 20px;>
+      display: block;
+      
+    }
+
+    /* PROJECT SECTION */
+    .project-card {
+      border: 1px solid #0A9396;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .project-title {
+      font-family: 'Merriweather', serif;
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #0A9396;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+
+/* BIG DECORATIVE LINE */
+.about-line-horizontal {
+  width: 800px;
+  display: block;
+  margin: 0px auto;
+  filter: invert(32%) sepia(20%) saturate(1500%) hue-rotate(150deg) brightness(90%) contrast(90%);
+}
+    .project-description {
+      font-family: 'Merienda', cursive;
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="top-header">
+    <div><img src="images/logo.jpg" class="jd-logo"></div>
+
+    <div class="header-center">
+      <h1 class="site-name">Jagandra Selvamoorthi</h1>
+    </div>
+
+    <div class="header-right">
+      <div class="searchbar-wrapper">
+        <a href="mailto:jagandradesign@gmail.com"><img src="icons/email.jpg" class="icon"> Email</a>
+        <a href="https://github.com/Jagandra"><img src="icons/github.jpg" class="icon"> GitHub</a>
+        <a href="https://www.linkedin.com/in/jagandra-selvamoorthi-152756393/"><img src="icons/linkedin.jpg" class="icon"> LinkedIn</a>
+        <a href="https://www.instagram.com/jagandra_design"><img src="icons/instagram.jpg" class="icon"> Instagram</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <!-- FIRST PARAGRAPH + PHOTO -->
+    <div style="display:flex; align-items:flex-start;">
+      <div style="flex:1;">
+        <p class="info-text">
+          I’m Jagandra Selvamoorthi, a BA Information Technology student at York University with a strong interest in creative technology. I enjoy building web experiences, designing 3D CAD models in Onshape, and creating visual content in Canva. My work blends technical skill with artistic detail, allowing me to bring ideas to life in both digital and traditional forms.
+        </p>
+      </div>
+
+      <img src="images/JagandraSelvamoorthi.jpg" class="profile-photo">
+    </div>
+   
+<!-- TOP LINE -->
+<img src="images/Under.png" class="about-line-horizontal">
+
+<!-- ABOUT ME TITLE BOX -->
+<div class="about-box">
+  <h2 class="about-title">About Me</h2>
+</div>
+
+<!-- ABOUT ME PARAGRAPH -->
+<p class="info-text">
+  I create detailed 3D models, design clean visual graphics, and produce traditional artwork such as pencil sketches, portraits, and black‑and‑white canvas pieces. I enjoy combining creativity with technology. Some of my projects are <span class="highlight">highlighted</span> below.
+</p>
+
+<!-- DECORATIVE LINE -->
+<img src="images/Under.png" class="about-line-horizontal">
+
+<!--  PROJECTS TITLE -->
+<h2 style="
+  font-family: 'Merienda';
+  font-size: 40px;
+  color: #005F73;
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 25px;">
+  Projects
+</h2>
+
+<!-- PROJECT 1 -->
+<div id="project1" class="project-card" style="background:#ffffd0;">
+  <a href="Robot.html" style="text-decoration:none; color:inherit;">
+    <img src="images/Robotcar.jpg"
+         style="width:120px; float:left; margin-right:20px; border-radius:10px;">
+    <h3 class="project-title">Miniature Robot Car Design</h3>
+  </a>
+
+  <p class="project-description">
+    Designed a miniature robot car featuring a custom chassis and integrated wheels.
+    Focused on assembly constraints to ensure all mechanical parts moved correctly together.
+    This project highlights my ability to design multi‑part mechanical systems for robotics.
+  </p>
+
+  <div style="clear:both;"></div>
+</div>
+
+<!-- PROJECT 2 -->
+<div id="project2" class="project-card" style="background:#e0f7ff;">
+  <a href="Onshape.html" style="text-decoration:none; color:inherit;">
+    <img src="icons/onshape_logo.png"
+         style="width:120px; float:left; margin-right:20px; border-radius:10px;">
+    <h3 class="project-title">Onshape 3D Modeling Portfolio</h3>
+  </a>
+
+  <p class="project-description">
+    A collection of my finished 3D CAD models created in Onshape, featuring mechanical parts,
+    assemblies, and creative engineering designs. This portfolio highlights my ability to build
+    clean, detailed, and fully structured models using professional CAD workflows.
+    Click to view the complete gallery of my Onshape work.
+  </p>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+
+<!-- PROJECT 3 -->
+<div id="project3" class="project-card" style="background:#ffe7d6;">
+  <a href="PublishedArt.html" style="text-decoration:none; color:inherit;">
+    <img src="icons/magazineicon.png"
+         style="width:120px; float:left; margin-right:20px; border-radius:10px;">
+    <h3 class="project-title">Published Black‑and‑White Artwork (2024–2025)</h3>
+  </a>
+
+  <p class="project-description">
+    A black‑and‑white portrait painting selected for publication in the
+    Thistletown Collegiate Institute school magazine during the 2024–2025
+    academic year. Click to view the featured artwork.
+  </p>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+<!-- PROJECT 4 -->
+<div id="project4" class="project-card" style="background:#f0eaff;">
+  <a href="PortraitGallery.html" style="text-decoration:none; color:inherit;">
+    <img src="icons/painting.jpg"
+         style="width:120px; height:120px; object-fit:cover; float:left; margin-right:20px; border-radius:10px;">
+    <h3 class="project-title">Black‑and‑White Portrait Collection</h3>
+  </a>
+
+  <p class="project-description">
+    A collection of seven black‑and‑white portrait paintings focused on realism,
+    shading, and expressive facial detail. Click to view the full gallery.
+  </p>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+<!-- PROJECT 5 -->
+<div id="project5" class="project-card" style="background:#ffe5e5;">
+  <a href="InequalityArt.html" style="text-decoration:none; color:inherit;">
+    <img src="icons/YouthEdge.jpg"
+         style="width:120px; height:120px; object-fit:cover; float:left; margin-right:20px; border-radius:10px;">
+    <h3 class="project-title">Inequality Artwork — Youth in Art Show</h3>
+  </a>
+
+  <p class="project-description">
+    A black‑and‑white artwork exploring social inequality, showcased at the
+    Youth in Art – Edge Youth Art Show. Includes exhibition photos and artist details.
+  </p>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+<!-- PROJECT 6 -->
+<div id="project6" class="project-card" style="background:#fff7d9;">
+  <a href="PencilSketches.html" style="text-decoration:none; color:inherit;">
+    <img src="icons/pencil_icon.png"
+         style="width:120px; height:120px; object-fit:cover; float:left; margin-right:20px; border-radius:10px;">
+    <h3 class="project-title">Pencil Sketching Collection</h3>
+  </a>
+
+  <p class="project-description">
+    A collection of detailed pencil sketches including portraits, objects, and creative illustrations.
+    This gallery highlights shading techniques, realism, and expressive hand‑drawn artwork.
+    Click to view the full sketch collection.
+  </p>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+<!-- PROJECT 7 -->
+<div id="project7" class="project-card" style="background:#e8f7ff;">
+  <a href="SchoolArtProjects.html" style="text-decoration:none; color:inherit;">
+    <img src="icons/TCI.png"
+         style="width:120px; height:120px; object-fit:cover; float:left; margin-right:20px; border-radius:10px;">
+    <h3 class="project-title">School Art Projects Collection</h3>
+  </a>
+
+  <p class="project-description">
+    A collection of creative school projects including ceramic artwork,
+    nail design, and a hairstyling class poster. Click to view the full gallery.
+  </p>
+
+  <div style="clear:both;"></div>
+</div>
+
+<!-- DECORATIVE LINE -->
+<img src="images/Under.png" class="about-line-horizontal">
+
+
+<!--  WORK EXPERIENCE TITLE -->
+<h2 style="
+  font-family: 'Merienda';
+  font-size: 40px;
+  color: #5a189a;
+  text-align: center;
+  margin-top: -35px;
+  margin-bottom: 25px;">
+  Work Experience
+</h2>
+
+<!--  WORK EXPERIENCE CARD -->
+<div id="work-experience" class="project-card" style="background:#f0e8ff;">
+
+  <!-- Left Icon -->
+  <img src="icons/yipi_logo.png"
+       style="width:120px; height:120px; object-fit:cover; float:left; margin-right:20px; border-radius:10px;">
+
+  <!-- CLICKABLE TITLE -->
+  <a href="tps.html" style="text-decoration:none; color:#5a189a;">
+    <h3 class="project-title" style="margin-top:0; font-size:22px;">
+      Youth in Policing Initiative (YIPI) – Toronto Police Service
+    </h3>
+  </a>
+
+  <!-- Description -->
+  <p class="project-description" style="margin-top:10px;">
+    I completed the YIPI program with the Toronto Police Service, where I learned teamwork,
+    communication, and professional workplace skills. I received the Creative Award and the
+    Most Improved Award at graduation. Tap to view my full YIPI experience.
+  </p>
+
+  <!-- Clear float -->
+  <div style="clear:both;"></div>
+
+</div>
+
+
+
+
+
+
+<footer style="
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+
+  /* MOVE FOOTER DOWN */
+  margin-top:60px; /* edit this to move footer lower */
+
+  /* FOOTER BACKGROUND IMAGE */
+  background-image:url('images/peacock.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  /* FOOTER HEIGHT */
+  padding-top:80px;
+  padding-bottom:80px;
+
+  padding-left:20px;
+  padding-right:20px;
+
+  color:white;
+  font-family:'Merienda', sans-serif;
+">
+
+  <div style="
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  ">
+
+    <!-- CENTER INFO -->
+    <div>
+      <div style="font-size:36px; font-weight:bold; font-family:'Merriweather', serif;">
+        Jagandra Selvamoorthi
+      </div>
+
+      <div style="font-size:22px; opacity:0.9; margin-top:5px;">
+        Creative Student
+      </div>
+
+      <div style="margin-top:10px; opacity:0.7; font-size:15px;">
+        © 2026 Jagandra | Portfolio Website
+      </div>
+    </div>
+
+    <!-- CENTERED LOGOS UNDER INFO -->
+    <div style="
+      margin-top:25px;
+      display:flex;
+      justify-content:center;
+      gap:25px;
+    ">
+      <a href="https://github.com/Jagandra">
+        <img src="icons/github.jpg" style="width:36px;">
+      </a>
+
+      <a href="https://www.linkedin.com/in/jagandra-selvamoorthi-152756393/">
+        <img src="icons/linkedin.jpg" style="width:36px;">
+      </a>
+
+      <a href="https://www.instagram.com/jagandra_design">
+        <img src="icons/instagram.jpg" style="width:36px;">
+      </a>
+
+      <a href="mailto:jagandradesign@gmail.com">
+        <img src="icons/email.jpg" style="width:36px;">
+      </a>
+    </div>
+
+  </div>
+
+</footer>
